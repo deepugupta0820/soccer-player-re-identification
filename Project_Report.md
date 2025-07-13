@@ -1,3 +1,5 @@
+# Real-Time Player Tracking and Re-Identification using YOLOv11 and Deep SORT
+
 # My Approach and Methodology
 
 I use a YOLO-based object detector 'YOLOv11' via Ultralytics (best.pt) to detect football players frame-by-frame in given video (15sec_input_720p.mp4). Detected bounding boxes are passed to the Deep SORT tracker, which assigns consistent player IDs across frames using appearance features and motion estimation. Boxes showing player positions and their ID numbers are drawn on the video frames, and the updated video is saved as a new file (output.mp4).
