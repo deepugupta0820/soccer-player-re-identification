@@ -46,6 +46,8 @@ pip install opencv-python matplotlib numpy IPython ultralytics deep-sort-realtim
 
 ### 4. Download model `best.pt`
 
+[Download best.pt from Google Drive](https://drive.google.com/file/d/1-5fOSHOSB9UXyP_enOoZNAMScrePVcMD/view)
+
 Place your model `best.pt` in the project directory.
 
 ### 5. Add Input Video
