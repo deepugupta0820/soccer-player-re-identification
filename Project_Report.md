@@ -9,6 +9,10 @@ I use a YOLO-based object detector 'YOLOv11' via Ultralytics (best.pt) to detect
 
 The first technique involved using color histograms to capture the visual appearance of players. However, this method proved ineffective in maintaining consistent identities. Since many players wore similar jerseys, and because of changing lighting and players blocking each other, the color information wasn’t reliable. This made it hard to tell players apart, resulting in poor tracking performance.
 
+### Deep SORT with TorchreID:
+
+TorchreID offers strong re-identification models that can improve accuracy and ID consistency. However, it comes with heavy dependencies and can be slow to run or train—especially on limited hardware. That's why I chose **MobileNet**, which is faster and still gives good enough accuracy for real-time tracking.
+
 ### YOLO Detection:
 
 - Players are filtered based on confidence score (conf > 0.6) and size (width/height > 10).
@@ -18,7 +22,7 @@ The first technique involved using color histograms to capture the visual appear
 
 - Used mobilenet as an appearance embedder.
 - Tracker settings tuned for ID stability:
-  - max_age=200, n_init=5, max_cosine_distance=0.2, etc.
+  - `max_age`=200, `n_init`=5, `max_cosine_distance`=0.2, etc.
 - Tracks are updated per frame and visualized in real-time.
 
 
